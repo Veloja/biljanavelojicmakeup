@@ -1,0 +1,12 @@
+.gallery {
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.gallery__image {
+  width: 30%;
+  height: 200px;
+  margin-bottom: 40px;
+}

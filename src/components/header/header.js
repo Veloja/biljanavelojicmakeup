@@ -20,10 +20,14 @@ const Header = () => {
             </Link>
           </li>
           <li className="header__list-item">
-            <Link className="header__list-link">gallery</Link>
+            <Link to="/gallery/" className="header__list-link">
+              gallery
+            </Link>
           </li>
           <li className="header__list-item">
-            <Link className="header__list-link">contact</Link>
+            <Link to="/contact/" className="header__list-link">
+              contact
+            </Link>
           </li>
         </ul>
       </nav>

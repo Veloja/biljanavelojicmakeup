@@ -48,6 +48,7 @@ const Blog = ({ data, location }) => {
                 width: "30%",
                 backgroundColor: "white",
                 marginBottom: "40px",
+                borderRadius: 20,
               }}
             >
               <Image
@@ -58,7 +59,7 @@ const Blog = ({ data, location }) => {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  padding: "10px",
+                  padding: "15px",
                 }}
               >
                 <article

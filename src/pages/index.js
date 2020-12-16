@@ -2,28 +2,12 @@ import React from "react"
 import Image from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+const Home = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="Biljana Velojic" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
+  // const posts = data.allMarkdownRemark.nodes
   const avatar = data?.homeImage?.childImageSharp?.fluid
 
   return (
@@ -40,7 +24,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default Home
 
 export const pageQuery = graphql`
   query {
@@ -51,9 +35,6 @@ export const pageQuery = graphql`
     }
     homeImage: file(absolutePath: { regex: "/home-image.jpg/" }) {
       childImageSharp {
-        # fixed( quality: 95) {
-        #   ...GatsbyImageSharpFixed
-        # }
         fluid(maxWidth: 1970) {
           ...GatsbyImageSharpFluid
           presentationWidth
