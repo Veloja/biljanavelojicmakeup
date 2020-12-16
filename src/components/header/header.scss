@@ -1,0 +1,57 @@
+.header {
+  width: 100%;
+  padding: 40px 0;
+  background-color: black;
+}
+
+.header__title {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.header__nav {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.header__list-item {
+  cursor: pointer;
+  margin-right: 40px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.header__list-link {
+  position: relative;
+  color: white;
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
